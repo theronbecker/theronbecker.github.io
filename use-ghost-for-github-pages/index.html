@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Use Ghost for GitHub Pages</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=4d3f96d559" />
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
+    
+    <meta property="og:site_name" content="Ron Becker" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Use Ghost for GitHub Pages" />
+    <meta property="og:description" content="There are a lot of great options for creating static sites to use with GitHub Pages. The &quot;go to&quot; seems to be Jekyll. But, some of use like other options much better. Like Ghost! The only problem is Ghost isn&#x27;t a static site generator like Jekyll. Typically you need to" />
+    <meta property="og:url" content="http://localhost:2368/use-ghost-for-github-pages/" />
+    <meta property="article:published_time" content="2019-11-30T13:03:42.000Z" />
+    <meta property="article:modified_time" content="2019-11-30T13:03:42.000Z" />
+    <meta property="article:tag" content="GitHub Pages" />
+    <meta property="article:tag" content="GitHub" />
+    <meta property="article:tag" content="Ghost" />
+    <meta property="article:tag" content="Static Site Generator" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Use Ghost for GitHub Pages" />
+    <meta name="twitter:description" content="There are a lot of great options for creating static sites to use with GitHub Pages. The &quot;go to&quot; seems to be Jekyll. But, some of use like other options much better. Like Ghost! The only problem is Ghost isn&#x27;t a static site generator like Jekyll. Typically you need to" />
+    <meta name="twitter:url" content="http://localhost:2368/use-ghost-for-github-pages/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ron Becker" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="GitHub Pages, GitHub, Ghost, Static Site Generator" />
+    <meta name="twitter:site" content="@TheRonBecker" />
+    <meta name="twitter:creator" content="@TheRonBecker" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ron Becker",
+        "logo": "http://localhost:2368/content/images/2019/11/ronbecker-logo-bluewhite-2.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ron Becker",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/b6759b6a767b4db40d372a269cebc330?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/ronbecker/",
+        "sameAs": [
+            "https://theronbecker.github.io",
+            "https://twitter.com/TheRonBecker"
+        ]
+    },
+    "headline": "Use Ghost for GitHub Pages",
+    "url": "http://localhost:2368/use-ghost-for-github-pages/",
+    "datePublished": "2019-11-30T13:03:42.000Z",
+    "dateModified": "2019-11-30T13:03:42.000Z",
+    "keywords": "GitHub Pages, GitHub, Ghost, Static Site Generator",
+    "description": "There are a lot of great options for creating static sites to use with GitHub\nPages [https://pages.github.com/]. The &quot;go to&quot; seems to be Jekyll. But, some of\nuse like other options much better. Like Ghost [https://ghost.org]! The only\nproblem is Ghost isn&#x27;t a static site generator like Jekyll. Typically you need\nto install Ghost on your server to use it. But, there is a way around that!\n\nThis site is actually a Ghost site. So, that is what I&#x27;m going to go over today.\n\nRequirements\n * Linux - you",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    
+        <script src="https://js.stripe.com/v3/"></script>
+        <script defer src="../public/members.js?v=4d3f96d559"></script>
+    
+    <meta name="generator" content="Ghost 3.1" />
+    <link rel="alternate" type="application/rss+xml" title="Ron Becker" href="../rss/index.html" />
+
+</head>
+<body class="post-template tag-github-pages tag-github tag-ghost-tag tag-static-site-generator">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header">
+    <div class="outer site-nav-main">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+            <a class="site-nav-logo" href="../index.html"><img src="../content/images/2019/11/ronbecker-logo-bluewhite-2.png" alt="Ron Becker" /></a>
+        <div class="site-nav-content">
+                <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="../index.html">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="../author/ronbecker/index.html">About</a></li>
+    <li class="nav-github" role="menuitem"><a href="https://github.com/theronbecker">GitHub</a></li>
+</ul>
+
+                <span class="nav-post-title ">Use Ghost for GitHub Pages</span>
+        </div>
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+                <a class="social-link social-link-tw" href="https://twitter.com/TheRonBecker" title="Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+        </div>
+            <a class="subscribe-button" href="index.html#subscribe">Subscribe</a>
+    </div>
+</nav>
+    </div>
+</div></header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-github-pages tag-github tag-ghost-tag tag-static-site-generator no-image no-image">
+
+            <header class="post-full-header">
+
+                <section class="post-full-tags">
+                    <a href="../tag/github-pages/index.html">GitHub Pages</a>
+                </section>
+
+                <h1 class="post-full-title">Use Ghost for GitHub Pages</h1>
+
+
+                <div class="post-full-byline">
+
+                    <section class="post-full-byline-content">
+
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <img class="author-profile-image" src="http://www.gravatar.com/avatar/b6759b6a767b4db40d372a269cebc330?s=250&amp;d=mm&amp;r=x" alt="Ron Becker" />
+                                    <div class="author-info">
+                                        <div class="bio">
+                                            <h2>Ron Becker</h2>
+                                            <p>Ron is just another guy with accounts on GitLab, and GitHub who thinks he is important. He has experience with web design and development, and is working his way into Linux development.</p>
+                                            <p><a href="../author/ronbecker/index.html">More posts</a> by Ron Becker.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="../author/ronbecker/index.html" class="author-avatar">
+                                    <img class="author-profile-image" src="http://www.gravatar.com/avatar/b6759b6a767b4db40d372a269cebc330?s=250&amp;d=mm&amp;r=x" alt="Ron Becker" />
+                                </a>
+
+                            </li>
+                        </ul>
+
+                        <section class="post-full-byline-meta">
+                            <h4 class="author-name"><a href="../author/ronbecker/index.html">Ron Becker</a></h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2019-11-30">30 Nov 2019</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 3 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p>There are a lot of great options for creating static sites to use with <a href="https://pages.github.com/">GitHub Pages</a>. The "go to" seems to be Jekyll. But, some of use like other options much better. Like <a href="https://ghost.org">Ghost</a>! The only problem is Ghost isn't a static site generator like Jekyll. Typically you need to install Ghost on your server to use it. But, there is a way around that!</p><p>This site is actually a Ghost site. So, that is what I'm going to go over today.</p><h4 id="requirements">Requirements</h4><ul><li>Linux - you can adjust this guide to fit what distro you like best, but I'm going to be making it using Ubuntu.</li><li>An active internet connection.</li><li>The ability to understand me. This is by far the most difficult requirement to meet. Because, I'm not very good with words.</li></ul><h3 id="setup-and-install-the-prerequisits">Setup and Install the Prerequisits</h3><p>There are a few things we will need to set up first. The first thing we are going to cover is getting our workspace setup. </p><h4 id="install-node-js">Install Node.js</h4><p>Ghost is written in Node.js so we will need to install the Node.js runtime. As of right now Ghost doesn't support Node.js v13, so we will need to install v12. Luckily it's a super simple process.</p><p>Just enter the following commands into your terminal:</p><p><code>curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</code></p><p><code>sudo apt-get install -y nodejs</code></p><p>Node.js and npm should now be installed, and ready to go!</p><h4 id="install-ghost-locally">Install Ghost Locally</h4><p>Now that we have Node.js and npm we can install Ghost locally. The first thing we want to do is install the Ghost CLI tool.</p><p><code>npm install ghost-cli -g</code></p><p>Then we will make a Ghost directory, cd into it, and install Ghost by running the following commands:</p><p><code>mkdir ghost</code></p><p><code>cd ghost</code></p><p><code>ghost install local</code></p><p>This should install ghost, and start it for you automatically. If it doesn't you can run this command:</p><p><code>ghost start</code></p><p>Use your browser to navigate to <code>http://localhost:2368/ghost</code> to create your account, and access the admin panel. From here you can start reading the get started posts, adjust your settings, and start writting your own blog posts.</p><h4 id="prepare-your-static-folder">Prepare Your Static Folder</h4><p>For this I'm going to assume you've already created your <code>username.github.io</code> repo. I created my static folder inside of my ghost folder. It just felt a lot easier for me. What we are going to do is clone our <code>username.github.io</code> repo to a folder named static. By running a command like this: </p><p><code>git clone <a>git@github.com</a>:username/username.github.io.git static</code></p><h4 id="generate-your-static-site-using-buster-and-deploy-it-to-github-pages">Generate Your Static Site Using Buster and Deploy it to GitHub Pages</h4><p>Now you have Node.js, npm, and Ghost installed. You have a static folder, and a blog post or two ready. The next step is to generate your static site.</p><p>It's as simple as</p><p><code>buster generate --domain=http://localhost:2368</code></p><p>This will generate a static site into your static folder. There are a couple ways to deploy your site. The first one is:</p><p><code>buster deploy</code></p><p>However, I had a few issues with this. So, I decided to add, commit, and push the files in my static folder to GitHub myself.</p><h4 id="writing-new-blog-posts">Writing New Blog Posts</h4><p>If you want to change something, or publish new posts, it's pretty simple. Make sure Ghost is running, and if it isn't run <code>ghost start</code>, make your changes, generate your static site, and then deploy it like before.</p><p>Make just you <code>cd</code> into your ghost folder before you generate your static site.</p><p>That's it. Now you have a working Ghost static site to use for GitHub Pages!</p><h5 id="bonus-ghostbuster">Bonus: GhostBuster</h5><p>I got tired of typing the buster generate command, since deploy was giving me issues. And, I may have been a little bored. So I made a little script to make it easier. Here is the code:</p><pre><code class="language-bash">#!/bin/bash
+#
+# Just a super simple bash script that uses buster
+# on my local Ghost install to generate a static
+# site for GitLab or GitHub
+#
+# Of Course it has to look like a badass hacker made it
+# So it has to have ASCII at the start
+#
+
+echo " "
+echo "   _____ _               _   ____            _              "
+echo "  / ____| |             | | |  _ \          | |             "
+echo " | |  __| |__   ___  ___| |_| |_) |_   _ ___| |_ ___ _ __   "
+echo " | | |_ | '_ \ / _ \/ __| __|  _ &lt;| | | / __| __/ _ \ '__|  "
+echo " | |__| | | | | (_) \__ \ |_| |_) | |_| \__ \ ||  __/ |     "
+echo "  \_____|_| |_|\___/|___/\__|____/ \__,_|___/\__\___|_|     "
+echo " "
+echo " "
+echo "GhostBuster is getting ready to run. It will generate a static version"
+echo "of your local Ghost install. Then you can deploy it to GitHub Pages."
+
+# Pause it for 5 seconds so it can be read.
+sleep 7s
+
+# Run the buster command to generate and deploy static
+# site to GitHub Pages.
+buster generate --domain=http://localhost:2368
+
+# Everything needs a completion message!!
+echo "GhostBuster has finished generating your static site!"</code></pre><p>Honestly, the important part is at the very bottom... but, still don't you want it to look all hacker and have ASCII? And, I used <code>echo</code> instead of <code>printf</code> because I wanted that GhostBuster ASCII to look right. With this script I can just type <code>ghostbuster</code> and generate the static site.</p><p>This isn't really needed or important. I just really enjoy running it.</p>
+                </div>
+            </section>
+
+                <section class="subscribe-form">
+    <h3 class="subscribe-form-title">Subscribe to Ron Becker</h3>
+    <p class="subscribe-form-description">Get the latest posts delivered right to your inbox</p>
+    <form data-members-form="subscribe">
+        <div class="form-group">
+            <input class="subscribe-email" data-members-email placeholder="youremail@example.com" autocomplete="false" />
+            <button class="button primary" type="submit">
+                <span class="button-content">Subscribe</span>
+                <span class="button-loader"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+    <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+    <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20"
+            dur="0.5s" repeatCount="indefinite" />
+    </path>
+</svg></span>
+            </button>
+        </div>
+        <div class="message-success">
+            <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+        </div>
+        <div class="message-error">
+            Please enter a valid email address!
+        </div>
+    </form>
+</section>
+
+            <section class="post-full-comments">
+            <div id="disqus_thread"></div>
+              <script>
+                var disqus_config = function () {
+                this.page.url = "http://localhost:2368/use-ghost-for-github-pages/";
+                this.page.identifier = "ghost-5de25d29d38eb20df96f084e"
+                };
+                (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://ronbecker-gitlab-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            </section>
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+
+
+                <article class="post-card post tag-updates no-image no-image">
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../hello-world/index.html">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">Updates</div>
+                <h2 class="post-card-title">Hello, World!</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Well, I should at least get an introduction post in here. Right? My name is Ron, and I like to do a terrible job at web development, and making Frankenstein code projects. I did live, and house my terrible monsters over at GitHub. But,</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Ron Becker
+                    </div>
+            
+                    <a href="../author/ronbecker/index.html" class="static-avatar">
+                        <img class="author-profile-image" src="http://www.gravatar.com/avatar/b6759b6a767b4db40d372a269cebc330?s=250&amp;d=mm&amp;r=x" alt="Ron Becker" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="../author/ronbecker/index.html">Ron Becker</a></span>
+                <span class="post-card-byline-date"><time datetime="2019-11-29">29 Nov 2019</time> <span class="bull">&bull;</span> 1 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+        </div>
+    </div>
+</aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="../index.html">Ron Becker</a> &copy; 2019</section>
+                <nav class="site-footer-nav">
+                    <a href="../index.html">Latest Posts</a>
+                    
+                    <a href="https://twitter.com/TheRonBecker" target="_blank" rel="noopener">Twitter</a>
+                    <!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> -->
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="subscribe-success-message">
+        <a class="subscribe-close" href="javascript:;"></a>
+        You've successfully subscribed to Ron Becker!
+    </div>
+
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-close" href="index.html#"></a>
+        <div class="subscribe-overlay-content">
+                <img class="subscribe-overlay-logo" src="../content/images/2019/11/ronbecker-logo-bluewhite-2.png" alt="Ron Becker" />
+            <div class="subscribe-form">
+                <h1 class="subscribe-overlay-title">Subscribe to Ron Becker</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest & greatest posts delivered straight to your inbox</p>
+                <form data-members-form="subscribe">
+                    <div class="form-group">
+                        <input class="subscribe-email" data-members-email placeholder="youremail@example.com"
+                            autocomplete="false" />
+                        <button class="button primary" type="submit">
+                            <span class="button-content">Subscribe</span>
+                            <span class="button-loader"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+    <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+    <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20"
+            dur="0.5s" repeatCount="indefinite" />
+    </path>
+</svg></span>
+                        </button>
+                    </div>
+                    <div class="message-success">
+                        <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+                    </div>
+                    <div class="message-error">
+                        Please enter a valid email address!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="../assets/built/casper.js?v=4d3f96d559"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        $(document).ready(function () {
+            if (action == 'subscribe') {
+                $('body').addClass("subscribe-success");
+            }
+
+            $('.subscribe-success-message .subscribe-close').click(function () {
+                $('.subscribe-success-message').addClass('close');
+            });
+
+            // Reset form on opening subscrion overlay
+            $('.subscribe-button').click(function() {
+                $('.subscribe-overlay form').removeClass();
+                $('.subscribe-email').val('');
+            });
+        });
+    </script>
+
+    <script>
+    $(document).ready(function () {
+        // FitVids - start
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+        // FitVids - end
+
+        // Replace nav with title on scroll - start
+        Casper.stickyNavTitle({
+            navSelector: '.site-nav-main',
+            titleSelector: '.post-full-title',
+            activeClass: 'nav-post-title-active'
+        });
+        // Replace nav with title on scroll - end
+
+        // Hover on avatar
+        var hoverTimeout;
+        $('.author-list-item').hover(function () {
+            var $this = $(this);
+
+            clearTimeout(hoverTimeout);
+
+            $('.author-card').removeClass('hovered');
+            $(this).children('.author-card').addClass('hovered');
+
+        }, function () {
+            var $this = $(this);
+
+            hoverTimeout = setTimeout(function () {
+                $this.children('.author-card').removeClass('hovered');
+            }, 800);
+        });
+    });
+</script>
+
+
+    
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <head>
 
     <meta charset="utf-8">
@@ -7,10 +8,10 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="assets/built/screen.css?v=dd3d333c4e">
+    <link rel="stylesheet" type="text/css" href="assets/built/screen.css?v=4d3f96d559">
 
     <meta name="description" content="Because I'm Important!">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
@@ -19,11 +20,15 @@
     <meta property="og:title" content="Ron Becker">
     <meta property="og:description" content="Because I'm Important!">
     <meta property="og:url" content="http://localhost:2368/">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="http://localhost:2368/content/images/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ron Becker">
     <meta name="twitter:description" content="Because I'm Important!">
     <meta name="twitter:url" content="http://localhost:2368/">
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg">
     <meta name="twitter:site" content="@TheRonBecker">
+    <meta property="og:image:width" content="1192">
+    <meta property="og:image:height" content="670">
     
     <script type="application/ld+json">
 {
@@ -35,6 +40,12 @@
         "logo": "http://localhost:2368/content/images/2019/11/ronbecker-logo-bluewhite-2.png"
     },
     "url": "http://localhost:2368/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg",
+        "width": 1192,
+        "height": 670
+    },
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -45,7 +56,7 @@
 
     
         <script src="https://js.stripe.com/v3/"></script>
-        <script defer src="public/members.js?v=dd3d333c4e"></script>
+        <script defer src="public/members.js?v=4d3f96d559"></script>
     
     <meta name="generator" content="Ghost 3.1">
     <link rel="alternate" type="application/rss+xml" title="Ron Becker" href="rss/index.html">
@@ -59,7 +70,32 @@
 <header class="site-home-header">
     
 
-<div class="outer site-header-background no-image">
+<style type="text/css">
+    .responsive-header-img {
+        background-image: url(content/images/size/w2000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg);
+    }
+
+    @media(max-width: 1000px) {
+        .responsive-header-img {
+            background-image: url(content/images/size/w1000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg);
+            background-image: -webkit-image-set(url(content/images/size/w1000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 1x,
+                url(content/images/size/w2000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 2x);
+            background-image: image-set(url(content/images/size/w1000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 1x,
+                url(content/images/size/w2000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 2x);
+        }
+    }
+
+    @media(max-width: 600px) {
+        .responsive-header-img {
+            background-image: url(content/images/size/w600/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg);
+            background-image: -webkit-image-set(url(content/images/size/w600/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 1x,
+                url(content/images/size/w1000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 2x);
+            background-image: image-set(url(content/images/size/w600/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 1x,
+                url(content/images/size/w1000/2019/11/watch_dogs_2___dedsec___black_and_white_with_neon_by_uzijin_dbcg0w1-pre-1.jpg) 2x);
+        }
+    }
+</style>
+<div class="outer site-header-background responsive-header-img">
 
  
         <div class="inner">
@@ -69,8 +105,8 @@
         <div class="site-nav-content">
                 <ul class="nav" role="menu">
     <li class="nav-home nav-current" role="menuitem"><a href="index.html">Home</a></li>
-    <li class="nav-author" role="menuitem"><a href="author/ronbecker/">Author</a></li>
-    <li class="nav-contact" role="menuitem"><a href="contact/">Contact</a></li>
+    <li class="nav-about" role="menuitem"><a href="author/ronbecker/">About</a></li>
+    <li class="nav-github" role="menuitem"><a href="https://github.com/theronbecker">GitHub</a></li>
 </ul>
 
         </div>
@@ -97,6 +133,48 @@
     <div class="inner posts">
 
         <div class="post-feed">
+
+                <article class="post-card post tag-github-pages tag-github tag-ghost-tag tag-static-site-generator no-image no-image">
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="use-ghost-for-github-pages/">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">GitHub Pages</div>
+                <h2 class="post-card-title">Use Ghost for GitHub Pages</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>There are a lot of great options for creating static sites to use with GitHub Pages. The "go to" seems to be Jekyll. But, some of use like other options much better. Like Ghost! The only problem is Ghost isn't a static site generator</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Ron Becker
+                    </div>
+            
+                    <a href="author/ronbecker/" class="static-avatar">
+                        <img class="author-profile-image" src="http://www.gravatar.com/avatar/b6759b6a767b4db40d372a269cebc330?s=250&amp;d=mm&amp;r=x" alt="Ron Becker">
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="author/ronbecker/">Ron Becker</a></span>
+                <span class="post-card-byline-date"><time datetime="2019-11-30">30 Nov 2019</time> <span class="bull">•</span> 3 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
 
                 <article class="post-card post tag-updates no-image no-image">
 
@@ -152,8 +230,8 @@
         <div class="site-nav-content">
                 <ul class="nav" role="menu">
     <li class="nav-home nav-current" role="menuitem"><a href="index.html">Home</a></li>
-    <li class="nav-author" role="menuitem"><a href="author/ronbecker/">Author</a></li>
-    <li class="nav-contact" role="menuitem"><a href="contact/">Contact</a></li>
+    <li class="nav-about" role="menuitem"><a href="author/ronbecker/">About</a></li>
+    <li class="nav-github" role="menuitem"><a href="https://github.com/theronbecker">GitHub</a></li>
 </ul>
 
         </div>
@@ -225,7 +303,7 @@ C22.32,8.481,24.301,9.057,26.013,10.047z">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
-    <script src="assets/built/casper.js?v=dd3d333c4e"></script>
+    <script src="assets/built/casper.js?v=4d3f96d559"></script>
 
     <script>
         // Parse the URL parameter
